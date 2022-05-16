@@ -17,6 +17,7 @@ body,
   cursor: pointer;
   text-decoration: none;
 }
+
 #slides {
   margin-top: 30px;
   padding: 10px;
@@ -24,6 +25,7 @@ body,
   position: relative;
   z-index: 1;
 }
+
 #wrapper {
   width: 100%;
   overflow: hidden;
@@ -79,6 +81,7 @@ body,
   text-align: center;
   display: flex;
 }
+
 #bullets label {
   width: 30px;
   height: 30px;
@@ -127,21 +130,3 @@ body,
   width: 25%;
 }
 
-@media (max-width: 768px) {
-  .underSlideContent {
-    flex-direction: column-reverse;
-  }
-
-  #bullets {
-    justify-content: center;
-    margin-bottom: 15px;
-  }
-
-  .caption-wrapper {
-    margin: 0 auto;
-  }
-
-  .slide {
-    width: 100%;
-  }
-}
