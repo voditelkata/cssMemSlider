@@ -1,0 +1,143 @@
+body {
+  background-color: #00a8e8;
+}
+
+#slider {
+  margin: 0 auto;
+  width: 800px;
+  max-width: calc(100% - 40px);
+}
+
+#slider input[type="radio"] {
+  display: none;
+}
+
+#slider label {
+  cursor: pointer;
+  text-decoration: none;
+}
+#slides {
+  padding: 10px;
+  border: 3px solid #ccc;
+  background: #fff;
+  position: relative;
+  z-index: 1;
+}
+#wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slides .slide {
+  width: 25%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.inner {
+  transition: margin-left 800ms ease-in-out;
+  width: 400%;
+  height: 400px;
+  display: flex;
+}
+
+#slide1:checked ~ #slides .inner,
+#slide1:checked ~ .underSlideContent .caption-wrapper .caption {
+  margin-left: 0;
+}
+#slide2:checked ~ #slides .inner,
+#slide2:checked ~ .underSlideContent .caption-wrapper .caption {
+  margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner,
+#slide3:checked ~ .underSlideContent .caption-wrapper .caption {
+  margin-left: -200%;
+}
+#slide4:checked ~ #slides .inner,
+#slide4:checked ~ .underSlideContent .caption-wrapper .caption {
+  margin-left: -300%;
+}
+
+.slide_1 {
+  background: url(./assets/1652628395263.jpg);
+}
+.slide_2 {
+  background: url(./assets/1652628395275.jpg);
+}
+.slide_3 {
+  background: url(./assets/1652628395288.jpg);
+}
+.slide_4 {
+  background: url(./assets/1652628395300.jpg);
+}
+
+#bullets {
+  margin: 15px 0 0;
+  text-align: center;
+  display: flex;
+}
+#bullets label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bullets label:hover {
+  background-color: green;
+}
+
+.control {
+  width: 10px;
+  height: 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+#slide1:checked ~ .underSlideContent #bullets label:nth-child(1) .control,
+#slide2:checked ~ .underSlideContent #bullets label:nth-child(2) .control,
+#slide3:checked ~ .underSlideContent #bullets label:nth-child(3) .control,
+#slide4:checked ~ .underSlideContent #bullets label:nth-child(4) .control {
+  background: #444;
+}
+
+.underSlideContent {
+  display: flex;
+  justify-content: space-between;
+}
+
+.caption {
+  display: flex;
+  justify-content: space-around;
+  width: 400%;
+  transition: margin-left 800ms ease-in-out;
+}
+
+.caption-wrapper {
+  overflow: hidden;
+  width: 25%;
+}
+
+@media (max-width: 768px) {
+  .underSlideContent {
+    flex-direction: column-reverse;
+  }
+
+  #bullets {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .caption-wrapper {
+    margin: 0 auto;
+  }
+
+  .slide {
+    width: 100%;
+  }
+}
