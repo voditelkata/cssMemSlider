@@ -1,5 +1,6 @@
-body {
-  background-color: #00a8e8;
+body,
+.slides {
+  background-color: #c55481;
 }
 
 #slider {
@@ -17,9 +18,9 @@ body {
   text-decoration: none;
 }
 #slides {
+  margin-top: 30px;
   padding: 10px;
-  border: 3px solid #ccc;
-  background: #fff;
+  border: 3px solid #863861;
   position: relative;
   z-index: 1;
 }
@@ -79,7 +80,6 @@ body {
   display: flex;
 }
 #bullets label {
-  display: inline-block;
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -88,14 +88,18 @@ body {
   justify-content: center;
   align-items: center;
 }
-#bullets label:hover {
-  background-color: green;
+
+#bullets label:nth-child(1):hover > .control,
+#bullets label:nth-child(2):hover > .control,
+#bullets label:nth-child(3):hover > .control,
+#bullets label:nth-child(4):hover > .control {
+  background-color: #592a4b;
 }
 
 .control {
   width: 10px;
   height: 10px;
-  border: 2px solid black;
+  border: 2px solid #592a4b;
   border-radius: 50%;
 }
 
@@ -103,7 +107,7 @@ body {
 #slide2:checked ~ .underSlideContent #bullets label:nth-child(2) .control,
 #slide3:checked ~ .underSlideContent #bullets label:nth-child(3) .control,
 #slide4:checked ~ .underSlideContent #bullets label:nth-child(4) .control {
-  background: #444;
+  background: #fff;
 }
 
 .underSlideContent {
