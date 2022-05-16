@@ -130,3 +130,21 @@ body,
   width: 25%;
 }
 
+@media (max-width: 768px) {
+  .underSlideContent {
+    flex-direction: column-reverse;
+  }
+
+  #bullets {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .caption-wrapper {
+    margin: 0 auto;
+  }
+
+  .slide {
+    width: 100%;
+  }
+}
