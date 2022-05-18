@@ -13,7 +13,7 @@ h2 {
 
 #slider {
   margin: 0 auto;
-  width: 800px;
+  width: 50vw;
   max-width: calc(100% - 4rem);
 }
 
