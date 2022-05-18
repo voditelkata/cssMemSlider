@@ -3,10 +3,18 @@ body,
   background-color: #c55481;
 }
 
+html {
+  font-size: 10px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
 #slider {
   margin: 0 auto;
   width: 800px;
-  max-width: calc(100% - 40px);
+  max-width: calc(100% - 4rem);
 }
 
 #slider input[type="radio"] {
@@ -19,8 +27,8 @@ body,
 }
 
 #slides {
-  margin-top: 30px;
-  padding: 10px;
+  margin-top: 3rem;
+  padding: 1rem;
   border: 3px solid #863861;
   position: relative;
   z-index: 1;
@@ -42,7 +50,7 @@ body,
 .inner {
   transition: margin-left 800ms ease-in-out;
   width: 400%;
-  height: 400px;
+  height: 40rem;
   display: flex;
 }
 
@@ -77,16 +85,16 @@ body,
 }
 
 #bullets {
-  margin: 15px 0 0;
+  margin: 1.5rem 0 0;
   text-align: center;
   display: flex;
 }
 
 #bullets label {
-  width: 30px;
-  height: 30px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 100%;
-  margin: 0 10px;
+  margin: 0 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,8 +108,8 @@ body,
 }
 
 .control {
-  width: 10px;
-  height: 10px;
+  width: 1rem;
+  height: 1rem;
   border: 2px solid #592a4b;
   border-radius: 50%;
 }
@@ -130,6 +138,12 @@ body,
   width: 25%;
 }
 
+.caption-slide {
+  width: 100%;
+  display: flex;
+  align-content: flex-start;
+}
+
 @media (max-width: 768px) {
   .underSlideContent {
     flex-direction: column-reverse;
@@ -137,12 +151,12 @@ body,
 
   #bullets {
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
   }
 
-  .caption-wrapper {
+  /* .caption-wrapper {
     margin: 0 auto;
-  }
+  } */
 
   .slide {
     width: 100%;
